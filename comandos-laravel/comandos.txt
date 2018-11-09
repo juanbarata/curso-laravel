@@ -1,0 +1,13 @@
+Principais comandos utilizados no framework Laravel 5.6
+
+1) Criando um novo projeto com composer:
+
+$composer create-project --prefer-dist laravel/laravel <'nome do projeto'>
+
+2) Inicializando projeto:
+
+$php artisan serve
+
+3) Listando as rotas do projeto:
+
+$php artisan route:list
