@@ -54,3 +54,16 @@ Route::prefix('app')->group(function(){
         return 'Página about';
     });
 });
+
+//Seção 5 - Aula 16 - Redirecionamento
+
+Route::redirect('/aqui', 'ola');
+
+Route::view('/viewnome', 'hellonome',
+            ['nome'=> 'Juan', 'sobrenome'=> 'Barata']);
+
+Route::get('/hellonome/{nome}/{sobrenome}', function($nome, $sn){
+    return view('hellonome',
+            ['nome' => $nome,
+            'sobrenome' => $sn]);
+});
