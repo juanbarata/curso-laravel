@@ -57,7 +57,7 @@ Route::prefix('app')->group(function(){
 
 //Seção 5 - Aula 16 - Redirecionamento
 
-Route::redirect('/aqui', 'ola');
+Route::redirect('/aqui', '/ola', 301);
 
 Route::view('/viewnome', 'hellonome',
             ['nome'=> 'Juan', 'sobrenome'=> 'Barata']);
