@@ -104,8 +104,27 @@ Route::post('/rest/imprimir', function(Request $request){
     return "Bem vindo, $nome! Você tem $idade anos de idade.";
 });
 
-//Seção 5 - Aula 18 - HTTP - Parte 4
+//Seção 5 - Aula 20 - HTTP - Parte 4
 
 Route::match(['get', 'post'],'/rest/hello2', function(){
     return "Hello world 2.";
+});
+
+//Seção 5 - Aula 21 - HTTP - Parte 4
+
+Route::get('/produtos', function(){
+    echo "<h1>Produtos</h1>";
+    echo "<ol>";
+    echo "<li>Notebook</li>";
+    echo "<li>Tablet</li>";
+    echo "</ol>";
+})->name('meusprodutos');
+
+Route::get('/linkprodutos', function(){
+    $url = route('meusprodutos');
+    echo "<a href=\"" . $url . "\">Meus Produtos</a>";
+});
+
+Route::get('/redirecionarProdutos', function(){
+    return redirect()->route('meusprodutos');
 });
