@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 //Seção 5 - Aula 12
 
 Route::get('/', function () {
@@ -92,4 +94,18 @@ Route::patch('/rest/hello', function(){
 
 Route::options('/rest/hello', function(){
     return 'Hello {OPTIONS}';
+});
+
+//Seção 5 - Aula 18 - HTTP - Parte 3
+
+Route::post('/rest/imprimir', function(Request $request){
+    $nome = $request->input('nome');
+    $idade = $request->input('idade');
+    return "Bem vindo, $nome! Você tem $idade anos de idade.";
+});
+
+//Seção 5 - Aula 18 - HTTP - Parte 4
+
+Route::match(['get', 'post'],'/rest/hello2', function(){
+    return "Hello world 2.";
 });
