@@ -128,3 +128,9 @@ Route::get('/linkprodutos', function(){
 Route::get('/redirecionarProdutos', function(){
     return redirect()->route('meusprodutos');
 });
+
+//Seção 6 - Aula 26 - Meu primeiro Controller
+
+Route::get('/nome', 'MeuController@getNome');
+
+Route::get('/multiplicar/{n1}/{n2}', 'MeuController@multiplicar');
