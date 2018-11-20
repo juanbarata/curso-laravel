@@ -11,3 +11,10 @@ $php artisan serve
 3) Listando as rotas do projeto:
 
 $php artisan route:list
+
+4) Criando um Controller:
+$php artisan make:controller NomeDoController
+
+5) Criando um Controller com as funções básicas:
+$php artisan make:controller NomeDoController --resource
+

@@ -129,8 +129,12 @@ Route::get('/redirecionarProdutos', function(){
     return redirect()->route('meusprodutos');
 });
 
-//Seção 6 - Aula 26 - Meu primeiro Controller
+//Seção 6 - Aula 25 - Meu primeiro Controller
 
 Route::get('/nome', 'MeuController@getNome');
 
 Route::get('/multiplicar/{n1}/{n2}', 'MeuController@multiplicar');
+
+//Seção 6 - Aula 26 - Criando as funções básicas de um Controller com --resource
+
+Route::resource('/cliente', 'ControllerCliente');
